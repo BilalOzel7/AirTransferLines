@@ -1,4 +1,5 @@
 ﻿using AirTransferLines.Business.Abstract;
+using AirTransferLines.Business.Constants;
 using AirTransferLines.DataAccess.Abstract;
 using AirTransferLines.Entities;
 using Core.Utilities.Results;
@@ -20,13 +21,13 @@ namespace AirTransferLines.Business.Concrete
         public IResult Add(Acente acente)
         {
             _acenteDal.Add(acente);
-            return new SuccessResult("Acenta Başarıyla Eklendi.");
+            return new SuccessResult(Messages.AcenteAdded);
         }
 
         public IResult Delete(Acente entity)
         {
             _acenteDal.Delete(entity);
-            return new SuccessResult("Acenta Başarıyla Silindi.");
+            return new SuccessResult(Messages.AcenetDeleted);
         }
 
         public IDataResult<List<Acente>> GetAll()
@@ -42,7 +43,7 @@ namespace AirTransferLines.Business.Concrete
         public IResult Update(Acente entity)
         {
             _acenteDal.Update(entity);
-            return new SuccessResult("Acenta Başarıyla Güncellendi.");
+            return new SuccessResult(Messages.AcenetUpdated);
         }
     }
 }

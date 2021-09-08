@@ -14,7 +14,7 @@ namespace AirTransferLines.Entities
         public string Email { get; set; }
         public string Sifre { get; set; }
         public string Adres { get; set; }
-        public string firmaUnvan { get; set; }
+        public string FirmaUnvan { get; set; }
         public string Yetkili { get; set; }
         public string Telefon { get; set; }
         public int SehirID { get; set; }

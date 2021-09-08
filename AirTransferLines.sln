@@ -5,13 +5,13 @@ VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AirTransferLines.Entities", "AirTransferLines.Entities\AirTransferLines.Entities.csproj", "{9BD078AE-664F-4DEF-ABC8-3F75EDEB16EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirTransferLines.Business", "AirTransferLines.Business\AirTransferLines.Business.csproj", "{F4C00E2F-19EB-4E4F-8A40-5501B235D407}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AirTransferLines.Business", "AirTransferLines.Business\AirTransferLines.Business.csproj", "{F4C00E2F-19EB-4E4F-8A40-5501B235D407}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirTransferLines.DataAccess", "AirTransferLines.DataAccess\AirTransferLines.DataAccess.csproj", "{3185EF20-2318-46CB-87DF-F5BBE69BEBC1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AirTransferLines.DataAccess", "AirTransferLines.DataAccess\AirTransferLines.DataAccess.csproj", "{3185EF20-2318-46CB-87DF-F5BBE69BEBC1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirTransferLines.Core", "AirTransferLines.Core\AirTransferLines.Core.csproj", "{9A0C462B-4388-4135-96B5-E51EF08914F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AirTransferLines.Core", "AirTransferLines.Core\AirTransferLines.Core.csproj", "{9A0C462B-4388-4135-96B5-E51EF08914F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirTransferLines.WebUI", "AirTransferLines.WebUI\AirTransferLines.WebUI.csproj", "{51909080-7A94-4CE1-AF4D-8DAC4F91406C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirTransferLines.WebAPI", "AirTransferLines.WebAPI\AirTransferLines.WebAPI.csproj", "{73DB4B69-C928-4931-A1C3-EB94E60C3C32}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{9A0C462B-4388-4135-96B5-E51EF08914F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A0C462B-4388-4135-96B5-E51EF08914F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A0C462B-4388-4135-96B5-E51EF08914F8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{51909080-7A94-4CE1-AF4D-8DAC4F91406C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{51909080-7A94-4CE1-AF4D-8DAC4F91406C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{51909080-7A94-4CE1-AF4D-8DAC4F91406C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{51909080-7A94-4CE1-AF4D-8DAC4F91406C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73DB4B69-C928-4931-A1C3-EB94E60C3C32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73DB4B69-C928-4931-A1C3-EB94E60C3C32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73DB4B69-C928-4931-A1C3-EB94E60C3C32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73DB4B69-C928-4931-A1C3-EB94E60C3C32}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
