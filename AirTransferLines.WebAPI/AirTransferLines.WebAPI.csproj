@@ -15,4 +15,9 @@
     <ProjectReference Include="..\AirTransferLines.Entities\AirTransferLines.Entities.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Model\" />
+    <Folder Include="View\" />
+  </ItemGroup>
+
 </Project>
