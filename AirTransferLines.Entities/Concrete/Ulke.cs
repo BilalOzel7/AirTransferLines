@@ -9,8 +9,8 @@ namespace AirTransferLines.Entities
 {
    public class Ulke:IEntity
     {
-        public int UlkeId { get; set; }
-        public int UlastirmaUlkeId { get; set; }
+        public int UlkeID { get; set; }
+        public int UlastirmaUlkeID { get; set; }
         public string IkiliKod { get; set; }
         public string UcluKod { get; set; }
         public string UlkeAdi { get; set; }

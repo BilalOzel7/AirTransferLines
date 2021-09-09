@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace AirTransferLines.Business.Abstract
 {
-   public interface IAcenteService
+   public interface IDilService
     {
-        IDataResult<List<Acente>> GetAll();
-        IDataResult<Acente> GetByID(int ID);
-        IResult Add(Acente entity);
-        IResult Update(Acente entity);
-        IResult Delete(Acente entity);
+        IDataResult<List<Dil>> GetAll();
+        IDataResult<Dil> GetByID(int ID);
+        IResult Add(Dil entity);
+        IResult Update(Dil entity);
+        IResult Delete(Dil entity);
     }
 }

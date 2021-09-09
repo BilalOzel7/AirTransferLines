@@ -1,17 +1,16 @@
-﻿using AirTransferLines.Core.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AirTransferLines.Entities
+namespace AirTransferLines.Entities.DTOs
 {
-   public class Rezervasyon:IEntity
+   public class RezervasyonDTO
     {
         public int RezervasyonID { get; set; }
         public int UyeID { get; set; }
-        public int AcentaID  { get; set; }
+        public int AcenteID { get; set; }
         public DateTime KayıtTarih { get; set; }
         public decimal Fiyat { get; set; }
         public decimal EkstrasızFiyat { get; set; }
@@ -21,5 +20,8 @@ namespace AirTransferLines.Entities
         public decimal EuroKur { get; set; }
         public decimal UsdKur { get; set; }
         public decimal IndirimliFiyat { get; set; }
+        public string UyeAd { get; set; }
+        public string UyeSoyad { get; set; }
+        public string AcenteAd { get; set; }
     }
 }

@@ -1,16 +1,15 @@
-﻿using AirTransferLines.Core.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AirTransferLines.Entities
+namespace AirTransferLines.Entities.DTOs
 {
-   public class Acente:IEntity
+   public class AcenteDTO
     {
-        public int AcentaID { get; set; }
-        public string AcentaAdi { get; set; }
+        public int AcenteID { get; set; }
+        public string AcenteAdi { get; set; }
         public string Email { get; set; }
         public string Sifre { get; set; }
         public string Adres { get; set; }
@@ -30,5 +29,7 @@ namespace AirTransferLines.Entities
         public string YetkiliTelefon { get; set; }
         public string YetkiliEmail { get; set; }
         public decimal Kredi { get; set; }
+        public string UlkeAdi { get; set; }
+        public string SehirAd { get; set; }
     }
 }

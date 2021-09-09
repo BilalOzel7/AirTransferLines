@@ -10,8 +10,8 @@ namespace AirTransferLines.Entities
    public class Surucu:IEntity
     {
         public int SurucuID { get; set; }
-        public int AcentaID { get; set; }
-        public int UlkeId { get; set; }
+        public int AcenteID { get; set; }
+        public int UlkeID { get; set; }
         public int SehirID { get; set; }
         public int DilID { get; set; }
         public string SurucuAdi { get; set; }

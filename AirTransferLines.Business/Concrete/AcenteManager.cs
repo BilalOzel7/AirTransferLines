@@ -27,7 +27,7 @@ namespace AirTransferLines.Business.Concrete
         public IResult Delete(Acente entity)
         {
             _acenteDal.Delete(entity);
-            return new SuccessResult(Messages.AcenetDeleted);
+            return new SuccessResult(Messages.AcenteDeleted);
         }
 
         public IDataResult<List<Acente>> GetAll()
@@ -37,13 +37,13 @@ namespace AirTransferLines.Business.Concrete
 
         public IDataResult<Acente> GetByID(int ID)
         {
-            return new SuccessDataResult<Acente>(_acenteDal.Get(a => a.AcentaID == ID));
+            return new SuccessDataResult<Acente>(_acenteDal.Get(a => a.AcenteID == ID));
         }
 
         public IResult Update(Acente entity)
         {
             _acenteDal.Update(entity);
-            return new SuccessResult(Messages.AcenetUpdated);
+            return new SuccessResult(Messages.AcenteUpdated);
         }
     }
 }

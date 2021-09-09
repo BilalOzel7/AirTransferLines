@@ -9,10 +9,10 @@ namespace AirTransferLines.Entities
 {
    public class Dil:IEntity
     {
-        public int fldDilID { get; set; }
-        public string fldDilKod { get; set; }
-        public string fldBayrak { get; set; }
-        public string fldDilAdi { get; set; }
+        public int DilID { get; set; }
+        public string DilKod { get; set; }
+        public string Bayrak { get; set; }
+        public string DilAdi { get; set; }
         
 
     }

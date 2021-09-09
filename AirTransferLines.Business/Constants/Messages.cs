@@ -9,7 +9,30 @@ namespace AirTransferLines.Business.Constants
    public static class Messages
     {
         public static string AcenteAdded = "Acente eklendi";
-        public static string AcenetDeleted = "Acente silindi";
-        public static string AcenetUpdated = "Acenete güncellendi";
+        public static string AcenteDeleted = "Acente silindi";
+        public static string AcenteUpdated = "Acenete güncellendi";
+        public static string AracAdded = "Araba eklendi";
+        public static string AracDeleted = "Araba silindi";
+        public static string AracUpdated = "Araba güncellendi";
+        public static string SehirAdded = "Sehir eklendi";
+        public static string SehirDeleted = "Sehir silindi";
+        public static string SehirUpdated = "Sehir güncellendi";
+        public static string UlkeAdded = "Ulke eklendi";
+        public static string UlkeDeleted = "Ulke silindi";
+        public static string UlkeUpdated = "Ulke güncellendi";
+        public static string DilAdded = "Ulke eklendi";
+        public static string DilDeleted = "Ulke silindi";
+        public static string DilUpdated = "Ulke güncellendi";
+        public static string RezervasyonAdded = "Ulke eklendi";
+        public static string RezervasyonDeleted = "Ulke silindi";
+        public static string RezervasyonUpdated = "Ulke güncellendi";
+        public static string SurucuAdded = "Surucu eklendi";
+        public static string SurucuDeleted = "Surucu silindi";
+        public static string SurucuUpdated = "Surucu güncellendi";
+        public static string TransferAdded = "Surucu eklendi";
+        public static string TransferDeleted = "Surucu silindi";
+        public static string TransferUpdated = "Surucu güncellendi";
+        public static string TransferListed = "Transferler Listelendi";
+
     }
 }

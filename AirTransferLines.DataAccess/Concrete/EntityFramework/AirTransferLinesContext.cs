@@ -1,4 +1,5 @@
 ﻿using AirTransferLines.Entities;
+using AirTransferLines.Entities.Concrete;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -23,7 +24,8 @@ namespace AirTransferLines.DataAccess.Concrete.EntityFramework
         public DbSet<Ulke> Ulkeler { get; set; }
         public DbSet<Sehir> Sehirler { get; set; }
         public DbSet<Dil> Diller { get; set; }
-        
+        public DbSet<Uye> Uyeler { get; set; }
+
 
 
     }
