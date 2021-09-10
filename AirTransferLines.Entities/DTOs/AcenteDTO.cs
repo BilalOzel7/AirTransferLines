@@ -25,11 +25,12 @@ namespace AirTransferLines.Entities.DTOs
         public string FaturaAdres { get; set; }
         public string Iban { get; set; }
         public string VergiDaire { get; set; }
-        public string VergiNo { get; set; }
-        public string YetkiliTelefon { get; set; }
+        public string VergiDaireNo { get; set; }
+        public string YetkiliTel { get; set; }
         public string YetkiliEmail { get; set; }
         public decimal Kredi { get; set; }
         public string UlkeAdi { get; set; }
         public string SehirAd { get; set; }
+        public DateTime KayitTarih { get; set; }
     }
 }

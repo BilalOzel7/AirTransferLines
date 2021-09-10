@@ -1,3 +1,7 @@
+using AirTransferLines.Business.Abstract;
+using AirTransferLines.Business.Concrete;
+using AirTransferLines.DataAccess.Abstract;
+using AirTransferLines.DataAccess.Concrete.EntityFramework;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -24,6 +28,10 @@ namespace AirTransferLines.MVC
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddHttpClient();
+            services.AddSingleton<IAcenteService, AcenteManager>();
+            services.AddSingleton<IAcenteDal, EfAcenteDal>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

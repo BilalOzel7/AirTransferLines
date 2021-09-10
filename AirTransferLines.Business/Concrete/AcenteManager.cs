@@ -2,6 +2,7 @@
 using AirTransferLines.Business.Constants;
 using AirTransferLines.DataAccess.Abstract;
 using AirTransferLines.Entities;
+using AirTransferLines.Entities.DTOs;
 using Core.Utilities.Results;
 using System;
 using System.Collections.Generic;
@@ -18,32 +19,37 @@ namespace AirTransferLines.Business.Concrete
         {
             _acenteDal = acenteDal;
         }
-        public IResult Add(Acente acente)
+        public void Add(Acente acente)
         {
             _acenteDal.Add(acente);
-            return new SuccessResult(Messages.AcenteAdded);
+            return ;
         }
 
-        public IResult Delete(Acente entity)
+        public void Delete(Acente entity)
         {
             _acenteDal.Delete(entity);
-            return new SuccessResult(Messages.AcenteDeleted);
+            return ;
         }
 
-        public IDataResult<List<Acente>> GetAll()
+        public List<AcenteDTO> GetAll()
         {
-            return new SuccessDataResult<List<Acente>>(_acenteDal.GetAll());
+            return new List<AcenteDTO>(_acenteDal.GetAcenteDetails());
         }
 
-        public IDataResult<Acente> GetByID(int ID)
+        public   Acente GetByID(int ID)
         {
-            return new SuccessDataResult<Acente>(_acenteDal.Get(a => a.AcenteID == ID));
+            return  _acenteDal.Get(a => a.AcenteID == ID);
         }
 
-        public IResult Update(Acente entity)
+        public List<AcenteDTO>  GetAcenteDetails()
+        {
+            return new List<AcenteDTO>(_acenteDal.GetAcenteDetails());
+        }
+
+        public void Update(Acente entity)
         {
             _acenteDal.Update(entity);
-            return new SuccessResult(Messages.AcenteUpdated);
+            return ;
         }
     }
 }

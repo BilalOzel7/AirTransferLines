@@ -2,6 +2,7 @@
 using AirTransferLines.DataAccess.Abstract;
 using AirTransferLines.Entities;
 using AirTransferLines.Entities.DTOs;
+using Core.Utilities.Results;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,7 @@ namespace AirTransferLines.DataAccess.Concrete.EntityFramework
 {
    public class EfAcenteDal : EfEntityRepositoryBase<Acente, AirTransferLinesContext>, IAcenteDal
     {
-        public List<AcenteDTO> GetAcenteDetails(Expression<Func<AcenteDTO, bool>> filter = null)
+        public List<AcenteDTO>  GetAcenteDetails(Expression<Func<AcenteDTO, bool>> filter = null)
         {
             using (AirTransferLinesContext context = new AirTransferLinesContext())
             {
@@ -39,16 +40,17 @@ namespace AirTransferLines.DataAccess.Concrete.EntityFramework
                                  FirmaUnvan=ac.FirmaUnvan,
                                  Yetkili=ac.Yetkili,
                                  Telefon=ac.Telefon,
-                                 YetkiliTelefon=ac.YetkiliTelefon,
+                                 YetkiliTel=ac.YetkiliTel,
                                  YetkiliEmail=ac.YetkiliEmail,
                                  Sozlesme=ac.Sozlesme,
                                  SozlesmeOnayTarih=ac.SozlesmeOnayTarih,
                                  Notlar=ac.Notlar,
                                  SonLogin=ac.SonLogin,
                                  VergiDaire=ac.VergiDaire,
-                                 VergiNo=ac.VergiNo,
+                                 VergiDaireNo=ac.VergiDaireNo,
                                  Kredi=ac.Kredi,
-                                 Sifre=ac.Sifre
+                                 Sifre=ac.Sifre,
+                                 KayitTarih=ac.KayitTarih
                                  
                                  
                              };
