@@ -20,32 +20,32 @@ namespace AirTransferLines.Business.Concrete
             _sehirDal = sehirDal;
         }
 
-        public IResult Add(Sehir entity)
+        public void Add(Sehir entity)
         {
             _sehirDal.Add(entity);
-            return new SuccessResult(Messages.SehirAdded);
+            return ;
         }
 
-        public IResult Delete(Sehir entity)
+        public void Delete(Sehir entity)
         {
             _sehirDal.Delete(entity);
-            return new SuccessResult(Messages.SehirDeleted);
+            return ;
         }
 
-        public IDataResult<List<Sehir>> GetAll()
+        public List<Sehir> GetAll()
         {
-            return new SuccessDataResult<List<Sehir>>(_sehirDal.GetAll());
+            return new List<Sehir>(_sehirDal.GetAll());
         }
 
-        public IDataResult<Sehir> GetByID(int ID)
+        public Sehir GetByID(int ID)
         {
-            return new SuccessDataResult<Sehir>(_sehirDal.Get(a => a.SehirID == ID));
+            return _sehirDal.Get(a => a.SehirID == ID);
         }
 
-        public IResult Update(Sehir entity)
+        public void Update(Sehir entity)
         {
             _sehirDal.Update(entity);
-            return new SuccessResult(Messages.SehirUpdated);
+            return ;
         }
     }
 }

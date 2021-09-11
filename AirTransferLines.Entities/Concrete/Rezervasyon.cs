@@ -21,5 +21,8 @@ namespace AirTransferLines.Entities
         public decimal EuroKur { get; set; }
         public decimal UsdKur { get; set; }
         public decimal IndirimliFiyat { get; set; }
+        public string Rota { get; set; }
+        
+
     }
 }

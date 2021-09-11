@@ -1,0 +1,136 @@
+﻿@model IEnumerable<AirTransferLines.Entities.DTOs.RezervasyonDTO>
+@{
+    ViewData["Title"] = "RezervasyonList";
+}
+
+
+
+@*<table>
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>Acente Adı</td>
+                <td>EMail</td>
+                <td>Şifre</td>
+                <td>Adres</td>
+                <td>Unvanı</td>
+                <td>Yetkili</td>
+            </tr>
+        </thead>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.AcenteID</td>
+                <td>@item.AcenteAdi</td>
+                <td>@item.Email</td>
+                <td>@item.Sifre</td>
+                <td>@item.Adres</td>
+                <td>@item.FirmaUnvan</td>
+                <td>@item.Yetkili</td>
+            </tr>
+        }
+    </table>*@
+
+<link href="~/plugins/fullcalendar/css/fullcalendar.min.css" rel="stylesheet" />
+<div class="col-10" style="float: right;  margin-right:0px; margin-left:90px; margin-top:120px;">
+    <div class="row">
+        <div class="col-12">
+            <div class="card m-b-30">
+                <div class="card-body">
+                    <div id='calendar'></div>
+
+                    <div style='clear:both'></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <link href="~/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/css/styles.css" rel="stylesheet">
+    <script src="~/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="~/css/prettify.css" />
+    <!-- DataTables -->
+    <link href="~/plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Responsive datatable examples -->
+    <link href="~/plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+
+    <div class="row">
+        <div class="col-12">
+            <div class="card m-b-20">
+                <div class="card-body">
+
+                    <h4 class="mt-0 header-title">Rezervasyonlar</h4>
+                    <p class="text-muted m-b-30 ">
+                        Burada tüm rezervasyonları görebilirsiniz..
+                    </p>
+
+                    <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Üye Adı</th>
+                                <th>Üye Soyadı</th>
+                                <th>E Mail</th>
+                                <th>Telefon</th>
+                                <th>Kayıt Tarih</th>
+                                <th>Fiyat</th>
+                                <th>İndirimli Fiyat</th>
+
+                            </tr>
+                        </thead>
+
+
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.RezervasyonID</td>
+                                    <td>@item.UyeAd</td>
+                                    <td>@item.UyeSoyad</td>
+                                    <td>@item.Email</td>
+                                    <td>@item.Telefon</td>
+                                    <td>@item.KayıtTarih</td>
+                                    <td>@item.Fiyat</td>
+                                    <td>@item.IndirimliFiyat</td>
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div> <!-- end col -->
+    </div> <!-- end row -->
+    </div>
+    @section scripts {
+
+        <script src="~/plugins/jquery-ui/jquery-ui.min.js"></script>
+        <script src="~/plugins/moment/moment.js"></script>
+        <script src="~/plugins/fullcalendar/js/fullcalendar.min.js"></script>
+        <script src="~/Scripts/pages/calendar-init.js"></script>
+        <!-- Required datatable js -->
+        <script src="~/plugins/datatables/jquery.dataTables.min.js"></script>
+        <script src="~/plugins/datatables/dataTables.bootstrap4.min.js"></script>
+
+        <!-- Buttons examples -->
+        <script src="~/plugins/datatables/dataTables.buttons.min.js"></script>
+        <script src="~/plugins/datatables/buttons.bootstrap4.min.js"></script>
+        <script src="~/plugins/datatables/jszip.min.js"></script>
+        <script src="~/plugins/datatables/pdfmake.min.js"></script>
+        <script src="~/plugins/datatables/vfs_fonts.js"></script>
+        <script src="~/plugins/datatables/buttons.html5.min.js"></script>
+        <script src="~/plugins/datatables/buttons.print.min.js"></script>
+        <script src="~/plugins/datatables/buttons.colVis.min.js"></script>
+
+        <!-- Responsive examples -->
+        <script src="~/plugins/datatables/dataTables.responsive.min.js"></script>
+        <script src="~/plugins/datatables/responsive.bootstrap4.min.js"></script>
+
+        <!-- Datatable init js -->
+        <script src="~/Scripts/pages/datatables.init.js"></script>
+    }

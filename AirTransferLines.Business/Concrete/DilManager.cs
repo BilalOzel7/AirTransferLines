@@ -20,32 +20,32 @@ namespace AirTransferLines.Business.Concrete
             _dilDal = dilDal;
         }
 
-        public IResult Add(Dil entity)
+        public void Add(Dil entity)
         {
             _dilDal.Add(entity);
-            return new SuccessResult(Messages.DilAdded);
+            return ;
         }
 
-        public IResult Delete(Dil entity)
+        public void Delete(Dil entity)
         {
             _dilDal.Delete(entity);
-            return new SuccessResult(Messages.DilDeleted);
+            return ;
         }
 
-        public IDataResult<List<Dil>> GetAll()
+        public List<Dil> GetAll()
         {
-            return new SuccessDataResult<List<Dil>>(_dilDal.GetAll());
+            return new List<Dil>(_dilDal.GetAll());
         }
 
-        public IDataResult<Dil> GetByID(int ID)
+        public Dil GetByID(int ID)
         {
-            return new SuccessDataResult<Dil>(_dilDal.Get(a => a.DilID == ID));
+            return _dilDal.Get(a => a.DilID == ID);
         }
 
-        public IResult Update(Dil entity)
+        public void Update(Dil entity)
         {
             _dilDal.Update(entity);
-            return new SuccessResult(Messages.DilUpdated);
+            return ;
         }
     }
 }

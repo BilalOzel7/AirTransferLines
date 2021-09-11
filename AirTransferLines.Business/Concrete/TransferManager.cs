@@ -2,6 +2,7 @@
 using AirTransferLines.Business.Constants;
 using AirTransferLines.DataAccess.Abstract;
 using AirTransferLines.Entities;
+using AirTransferLines.Entities.DTOs;
 using Core.Utilities.Results;
 using System;
 using System.Collections.Generic;
@@ -20,37 +21,44 @@ namespace AirTransferLines.Business.Concrete
             _transferDal = transferDal;
         }
 
-        public IResult Add(Transfer entity)
+        public void Add(Transfer entity)
         {
             _transferDal.Add(entity);
-            return new SuccessResult(Messages.TransferAdded);
+            return ;
         }
 
-        public IResult Delete(Transfer entity)
+        public void Delete(Transfer entity)
         {
             _transferDal.Delete(entity);
-            return new SuccessResult(Messages.TransferDeleted);
+            return ;
         }
 
-        public IDataResult<List<Transfer>> GetAll()
+        public List<Transfer> GetAll()
         {
-            return new SuccessDataResult<List<Transfer>>(_transferDal.GetAll());
+            return new List<Transfer>(_transferDal.GetAll());
         }
 
-        public IDataResult<List<Transfer>> GetAllByTarih(DateTime min,DateTime max)
+        public List<Transfer> GetAllByTarih(DateTime min,DateTime max)
         {
-            return new SuccessDataResult<List<Transfer>>(_transferDal.GetAll(t => t.Tarih >= min && t.Tarih <= max), Messages.TransferListed);
+            return new List<Transfer>(_transferDal.GetAll(t => t.Tarih >= min && t.Tarih <= max));
         }
 
-        public IDataResult<Transfer> GetByID(int ID)
+        public Transfer GetByID(int ID)
         {
-            return new SuccessDataResult<Transfer>(_transferDal.Get(a => a.TransferID == ID));
+            return _transferDal.Get(a => a.TransferID == ID);
         }
 
-        public IResult Update(Transfer entity)
+        public List<TransferDTO> GetTransferDetails()
+        {
+            return new List<TransferDTO>(_transferDal.GetTransferDetails());
+        }
+
+        public void Update(Transfer entity)
         {
             _transferDal.Update(entity);
-            return new SuccessResult(Messages.TransferUpdated);
+            return;
         }
+
+        
     }
 }

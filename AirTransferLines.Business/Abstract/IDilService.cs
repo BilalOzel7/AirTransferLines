@@ -10,10 +10,10 @@ namespace AirTransferLines.Business.Abstract
 {
    public interface IDilService
     {
-        IDataResult<List<Dil>> GetAll();
-        IDataResult<Dil> GetByID(int ID);
-        IResult Add(Dil entity);
-        IResult Update(Dil entity);
-        IResult Delete(Dil entity);
+        List<Dil> GetAll();
+        Dil GetByID(int ID);
+        void Add(Dil entity);
+        void Update(Dil entity);
+        void Delete(Dil entity);
     }
 }

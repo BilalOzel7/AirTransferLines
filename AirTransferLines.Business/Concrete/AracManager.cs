@@ -20,32 +20,32 @@ namespace AirTransferLines.Business.Concrete
             _aracDal = aracDal;
         }
 
-        public IResult Add(Arac entity)
+        public void Add(Arac entity)
         {
             _aracDal.Add(entity);
-            return new SuccessResult(Messages.AracAdded);
+            return ;
         }
 
-        public IResult Delete(Arac entity)
+        public void Delete(Arac entity)
         {
             _aracDal.Delete(entity);
-            return new SuccessResult(Messages.AracDeleted);
+            return ;
         }
 
-        public IDataResult<List<Arac>> GetAll()
+        public List<Arac> GetAll()
         {
-            return new SuccessDataResult<List<Arac>>(_aracDal.GetAll());
+            return new List<Arac>(_aracDal.GetAll());
         }
 
-        public IDataResult<Arac> GetByID(int ID)
+        public Arac GetByID(int ID)
         {
-            return new SuccessDataResult<Arac>(_aracDal.Get(a => a.AracID == ID));
+            return _aracDal.Get(a => a.AracID == ID);
         }
 
-        public IResult Update(Arac entity)
+        public void Update(Arac entity)
         {
             _aracDal.Update(entity);
-            return new SuccessResult(Messages.AracUpdated);
+            return ;
         }
     }
 }

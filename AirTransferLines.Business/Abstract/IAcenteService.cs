@@ -13,11 +13,10 @@ namespace AirTransferLines.Business.Abstract
    public interface IAcenteService
     {
         List<AcenteDTO> GetAll();
-
         Acente GetByID(int ID);
         void Add(Acente entity);
         void Update(Acente entity);
         void Delete(Acente entity);
-       List<AcenteDTO>  GetAcenteDetails();
+        List<AcenteDTO>  GetAcenteDetails();
     }
 }

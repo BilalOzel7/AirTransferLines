@@ -31,6 +31,14 @@ namespace AirTransferLines.MVC
             services.AddHttpClient();
             services.AddSingleton<IAcenteService, AcenteManager>();
             services.AddSingleton<IAcenteDal, EfAcenteDal>();
+            services.AddSingleton<IRezervasyonService, RezervasyonManager>();
+            services.AddSingleton<IRezervasyonDal, EfRezervasyonDal>();
+            services.AddSingleton<ITransferService, TransferManager>();
+            services.AddSingleton<ITransferDal, EfTransferDal>();
+            services.AddSingleton<ISurucuService, SurucuManager>();
+            services.AddSingleton<ISurucuDal, EfSurucuDal>();
+            services.AddSingleton<IUyeService, UyeManager>();
+            services.AddSingleton<IUyeDal, EfUyeDal>();
 
         }
 

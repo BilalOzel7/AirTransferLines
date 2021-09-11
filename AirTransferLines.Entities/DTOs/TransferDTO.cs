@@ -18,8 +18,7 @@ namespace AirTransferLines.Entities.DTOs
         public string AracAdi { get; set; }
         public string Nereden { get; set; }
         public string Nereye { get; set; }
-        public string FromName { get; set; }
-        public string ToName { get; set; }
+        
         public int KisiSayisi { get; set; }
         public int BagajSayisi { get; set; }
         public DateTime Tarih { get; set; }
@@ -33,5 +32,6 @@ namespace AirTransferLines.Entities.DTOs
         public string UyeAd { get; set; }
         public string UyeSoyad { get; set; }
         public string Email { get; set; }
+        public string Telefon { get; set; }
     }
 }

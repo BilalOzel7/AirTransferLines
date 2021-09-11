@@ -10,10 +10,10 @@ namespace AirTransferLines.Business.Abstract
 {
    public interface IAracService
     {
-        IDataResult<List<Arac>> GetAll();
-        IDataResult<Arac> GetByID(int ID);
-        IResult Add(Arac entity);
-        IResult Update(Arac entity);
-        IResult Delete(Arac entity);
+        List<Arac> GetAll();
+        Arac GetByID(int ID);
+        void Add(Arac entity);
+        void Update(Arac entity);
+        void Delete(Arac entity);
     }
 }

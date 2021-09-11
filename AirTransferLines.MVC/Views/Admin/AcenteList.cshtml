@@ -3,32 +3,116 @@
     ViewData["Title"] = "AcenteList";
 }
 
-<h1>Acenteler</h1>
 
-<table>
-    <thead>
-        <tr>
-            <td>ID</td>
-            <td>Acente Adı</td>
-            <td>EMail</td>
-            <td>Şifre</td>
-            <td>Adres</td>
-            <td>Unvanı</td>
-            <td>Yetkili</td>
-        </tr>
-    </thead>
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>@item.AcenteID</td>
-            <td>@item.AcenteAdi</td>
-            <td>@item.Email</td>
-            <td>@item.Sifre</td>
-            <td>@item.Adres</td>
-            <td>@item.FirmaUnvan</td>
-            <td>@item.Yetkili</td>
-        </tr>
+
+
+@*<table>
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>Acente Adı</td>
+                <td>EMail</td>
+                <td>Şifre</td>
+                <td>Adres</td>
+                <td>Unvanı</td>
+                <td>Yetkili</td>
+            </tr>
+        </thead>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.AcenteID</td>
+                <td>@item.AcenteAdi</td>
+                <td>@item.Email</td>
+                <td>@item.Sifre</td>
+                <td>@item.Adres</td>
+                <td>@item.FirmaUnvan</td>
+                <td>@item.Yetkili</td>
+            </tr>
+        }
+    </table>*@
+<link href="~/css/bootstrap.min.css" rel="stylesheet">
+<link href="~/css/styles.css" rel="stylesheet">
+<script src="~/js/bootstrap.min.js"></script>
+<!-- DataTables -->
+<link href="~/plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+<link href="~/plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+
+<!-- Responsive datatable examples -->
+<link href="~/plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+<div class="col-10" style="float: right;  margin-right:0px; margin-left:90px; margin-top:200px;">
+    <div style="text-align:center">
+        <button type="button" class="btn btn-success waves-effect waves-light">Acente Ekle</button>
+        <button type="button" class="btn btn-info waves-effect waves-light">Aktif Acenteler</button>
+        <button type="button" class="btn btn-secondary waves-effect waves-light">Pasif Acenteler</button>
+
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-12">
+            <div class="card m-b-20">
+                <div class="card-body">
+
+                    <h4 class="mt-0 header-title">Tüm Acenteler</h4>
+                    <p class="text-muted m-b-30 ">
+                        Burada sistemdeki tüm kayıtlı acentaları görebilirsiniz...
+                    </p>
+
+                    <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Acente Adı</th>
+                                <th>EMail</th>
+                                <th>Şifre</th>
+                                <th>Adres</th>
+                                <th>Unvanı</th>
+                                <th>Yetkili</th>
+                            </tr>
+                        </thead>
+
+
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.AcenteID</td>
+                                    <td>@item.AcenteAdi</td>
+                                    <td>@item.Email</td>
+                                    <td>@item.Sifre</td>
+                                    <td>@item.Adres</td>
+                                    <td>@item.FirmaUnvan</td>
+                                    <td>@item.Yetkili</td>
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div> <!-- end col -->
+    </div> <!-- end row -->
+</div>
+    @section scripts {
+        <!-- Required datatable js -->
+        <script src="~/plugins/datatables/jquery.dataTables.min.js"></script>
+        <script src="~/plugins/datatables/dataTables.bootstrap4.min.js"></script>
+
+        <!-- Buttons examples -->
+        <script src="~/plugins/datatables/dataTables.buttons.min.js"></script>
+        <script src="~/plugins/datatables/buttons.bootstrap4.min.js"></script>
+        <script src="~/plugins/datatables/jszip.min.js"></script>
+        <script src="~/plugins/datatables/pdfmake.min.js"></script>
+        <script src="~/plugins/datatables/vfs_fonts.js"></script>
+        <script src="~/plugins/datatables/buttons.html5.min.js"></script>
+        <script src="~/plugins/datatables/buttons.print.min.js"></script>
+        <script src="~/plugins/datatables/buttons.colVis.min.js"></script>
+
+        <!-- Responsive examples -->
+        <script src="~/plugins/datatables/dataTables.responsive.min.js"></script>
+        <script src="~/plugins/datatables/responsive.bootstrap4.min.js"></script>
+
+        <!-- Datatable init js -->
+        <script src="~/Scripts/pages/datatables.init.js"></script>
     }
-</table>
-
-

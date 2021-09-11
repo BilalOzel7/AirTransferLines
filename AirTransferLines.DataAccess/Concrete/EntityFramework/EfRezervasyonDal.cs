@@ -41,7 +41,10 @@ namespace AirTransferLines.DataAccess.Concrete.EntityFramework
                                  Doviz = re.Doviz,
                                  EuroKur = re.EuroKur,
                                  UsdKur = re.UsdKur,
-                                 IndirimliFiyat = re.IndirimliFiyat
+                                 IndirimliFiyat = re.IndirimliFiyat,
+                                 Telefon = uye.Telefon,
+                                 Email = uye.Email,
+                                 Rota=re.Rota
 
 
 

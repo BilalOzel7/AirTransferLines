@@ -20,32 +20,32 @@ namespace AirTransferLines.Business.Concrete
             _ulkeDal = ulkeDal;
         }
 
-        public IResult Add(Ulke entity)
+        public void Add(Ulke entity)
         {
             _ulkeDal.Add(entity);
-            return new SuccessResult(Messages.UlkeAdded);
+            return ;
         }
 
-        public IResult Delete(Ulke entity)
+        public void Delete(Ulke entity)
         {
             _ulkeDal.Delete(entity);
-            return new SuccessResult(Messages.UlkeDeleted);
+            return ;
         }
 
-        public IDataResult<List<Ulke>> GetAll()
+        public List<Ulke> GetAll()
         {
-            return new SuccessDataResult<List<Ulke>>(_ulkeDal.GetAll());
+            return new List<Ulke>(_ulkeDal.GetAll());
         }
 
-        public IDataResult<Ulke> GetByID(int ID)
+        public Ulke GetByID(int ID)
         {
-            return new SuccessDataResult<Ulke>(_ulkeDal.Get(a => a.UlkeID == ID));
+            return _ulkeDal.Get(a => a.UlkeID == ID);
         }
 
-        public IResult Update(Ulke entity)
+        public void Update(Ulke entity)
         {
             _ulkeDal.Update(entity);
-            return new SuccessResult(Messages.UlkeUpdated);
+            return ;
         }
     }
 }

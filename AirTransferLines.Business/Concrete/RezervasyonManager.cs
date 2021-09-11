@@ -2,6 +2,7 @@
 using AirTransferLines.Business.Constants;
 using AirTransferLines.DataAccess.Abstract;
 using AirTransferLines.Entities;
+using AirTransferLines.Entities.DTOs;
 using Core.Utilities.Results;
 using System;
 using System.Collections.Generic;
@@ -20,32 +21,38 @@ namespace AirTransferLines.Business.Concrete
             _rezervasyonDal = rezervasyonDal;
         }
 
-        public IResult Add(Rezervasyon entity)
+        public void Add(Rezervasyon entity)
         {
             _rezervasyonDal.Add(entity);
-            return new SuccessResult(Messages.RezervasyonAdded);
+            return ;
         }
 
-        public IResult Delete(Rezervasyon entity)
+        public void Delete(Rezervasyon entity)
         {
             _rezervasyonDal.Delete(entity);
-            return new SuccessResult(Messages.RezervasyonDeleted);
+            return ;
         }
 
-        public IDataResult<List<Rezervasyon>> GetAll()
+        public List<Rezervasyon> GetAll()
         {
             throw new NotImplementedException();
         }
 
-        public IDataResult<Rezervasyon> GetByID(int ID)
+        public Rezervasyon GetByID(int ID)
         {
             throw new NotImplementedException();
         }
 
-        public IResult Update(Rezervasyon entity)
+        public void Update(Rezervasyon entity)
         {
             _rezervasyonDal.Update(entity);
-            return new SuccessResult(Messages.RezervasyonUpdated);
+            return;
+        }
+       
+
+        public List<RezervasyonDTO> GetRezervasyonDetails()
+        {
+            return new List<RezervasyonDTO>(_rezervasyonDal.GetRezervasyonDetails());
         }
     }
 }

@@ -16,5 +16,7 @@ namespace AirTransferLines.Entities.Concrete
         public string Sifre { get; set; }
         public string Adres { get; set; }
         public string Telefon { get; set; }
+        public int SehirID { get; set; }
+        public int UlkeID { get; set; }
     }
 }

@@ -38,8 +38,8 @@ namespace AirTransferLines.DataAccess.Concrete.EntityFramework
                                  UyeSoyad = uye.UyeSoyad,
                                  AracAdi = ar.AracAdi,
                                  Email = uye.Email,
-                                 FromName = tr.FromName,
-                                 ToName = tr.ToName,
+                                 Nereden=tr.Nereden,
+                                 Nereye=tr.Nereye,
                                  KisiSayisi = tr.KisiSayisi,
                                  BagajSayisi = tr.BagajSayisi,
                                  Tarih = tr.Tarih,
@@ -48,7 +48,8 @@ namespace AirTransferLines.DataAccess.Concrete.EntityFramework
                                  SureSaat = tr.SureSaat,
                                  Fiyat = tr.Fiyat,
                                  EkstrasızFiyat = tr.EkstrasızFiyat,
-                                 Doviz = tr.Doviz
+                                 Doviz = tr.Doviz,
+                                 Telefon = uye.Telefon
                              };
 
                 return filter == null ? result.ToList() : result.Where(filter).ToList();

@@ -17,8 +17,7 @@ namespace AirTransferLines.Entities
         public int DilID { get; set; }
         public string Nereden { get; set; }
         public string Nereye { get; set; }
-        public string FromName { get; set; }
-        public string ToName { get; set; }
+        
         public int KisiSayisi { get; set; }
         public int BagajSayisi { get; set; }
         public DateTime Tarih { get; set; }

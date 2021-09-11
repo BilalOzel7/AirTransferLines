@@ -10,10 +10,10 @@ namespace AirTransferLines.Business.Abstract
 {
    public interface ISehirService
     {
-        IDataResult<List<Sehir>> GetAll();
-        IDataResult<Sehir> GetByID(int ID);
-        IResult Add(Sehir entity);
-        IResult Update(Sehir entity);
-        IResult Delete(Sehir entity);
+        List<Sehir> GetAll();
+        Sehir GetByID(int ID);
+        void Add(Sehir entity);
+        void Update(Sehir entity);
+        void Delete(Sehir entity);
     }
 }

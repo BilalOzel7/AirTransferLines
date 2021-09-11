@@ -2,6 +2,7 @@
 using AirTransferLines.Business.Constants;
 using AirTransferLines.DataAccess.Abstract;
 using AirTransferLines.Entities;
+using AirTransferLines.Entities.DTOs;
 using Core.Utilities.Results;
 using System;
 using System.Collections.Generic;
@@ -19,32 +20,37 @@ namespace AirTransferLines.Business.Concrete
         {
             _surucuDal = surucuDal;
         }
-        public IResult Add(Surucu entity)
+        public void Add(Surucu entity)
         {
             _surucuDal.Add(entity);
-            return new SuccessResult(Messages.SurucuAdded);
+            return ;
         }
 
-        public IResult Delete(Surucu entity)
+        public void Delete(Surucu entity)
         {
             _surucuDal.Delete(entity);
-            return new SuccessResult(Messages.SurucuDeleted);
+            return ;
         }
 
-        public IDataResult<List<Surucu>> GetAll()
+        public List<Surucu> GetAll()
         {
-            return new SuccessDataResult<List<Surucu>>(_surucuDal.GetAll());
+            return new List<Surucu>(_surucuDal.GetAll());
         }
 
-        public IDataResult<Surucu> GetByID(int ID)
+        public Surucu GetByID(int ID)
         {
-            return new SuccessDataResult<Surucu>(_surucuDal.Get(a => a.SurucuID == ID));
+            return _surucuDal.Get(a => a.SurucuID == ID);
         }
 
-        public IResult Update(Surucu entity)
+        public List<SurucuDTO> GetSurucuDetails()
+        {
+            return new List<SurucuDTO>(_surucuDal.GetSurucuDetails());
+        }
+
+        public void Update(Surucu entity)
         {
             _surucuDal.Update(entity);
-            return new SuccessResult(Messages.SurucuUpdated);
+            return ;
         }
     }
 }

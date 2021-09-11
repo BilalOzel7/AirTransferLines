@@ -10,10 +10,10 @@ namespace AirTransferLines.Business.Abstract
 {
    public interface IUlkeService
     {
-        IDataResult<List<Ulke>> GetAll();
-        IDataResult<Ulke> GetByID(int ID);
-        IResult Add(Ulke entity);
-        IResult Update(Ulke entity);
-        IResult Delete(Ulke entity);
+        List<Ulke> GetAll();
+        Ulke GetByID(int ID);
+        void Add(Ulke entity);
+        void Update(Ulke entity);
+        void Delete(Ulke entity);
     }
 }

@@ -13,7 +13,7 @@ namespace AirTransferLines.DataAccess.Concrete.EntityFramework
 {
    public class EfSurucuDal : EfEntityRepositoryBase<Surucu, AirTransferLinesContext>, ISurucuDal
     {
-        public List<SurucuDTO> GetTransferDetails(Expression<Func<SurucuDTO, bool>> filter = null)
+        public List<SurucuDTO> GetSurucuDetails(Expression<Func<SurucuDTO, bool>> filter = null)
         {
             using (AirTransferLinesContext context = new AirTransferLinesContext())
             {

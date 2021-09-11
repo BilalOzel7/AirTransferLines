@@ -23,5 +23,8 @@ namespace AirTransferLines.Entities.DTOs
         public string UyeAd { get; set; }
         public string UyeSoyad { get; set; }
         public string AcenteAd { get; set; }
+        public string Email { get; set; }
+        public string Telefon { get; set; }
+        public string Rota { get; set; }
     }
 }
